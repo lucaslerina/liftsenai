@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -7,10 +9,115 @@
 
 body{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    justify-content:flex-start;
     background: url(./imgm/liftsenailimpo.jpg);
     background-size: cover;
     background-position: center;
+    background-color: transparent;
+    backdrop-filter: blur(8px); 
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); 
+    padding: 20px;
+}
+
+
+
+.logo { /*em cima do menu (da pra fazer uma imagem)*/ 
+    font-size: 2em;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.sidebar { /*faz o menu ir prolado*/
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 300px 1fr; 
+    height: 100vh;
+}
+.menu { /*organiza os botões*/
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 1; /* Permite que o menu ocupe o espaço central */
+}
+
+
+
+.btao-naveg {
+    text-decoration: none;
+    color: #fff;
+    padding: 12px 15px;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: left;
+    border: 1px solid transparent;
+}
+.btao-naveg:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+/* Botão ativo */
+.btao-naveg.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+    border-color: #fff;
+}
+
+
+
+/* Páginas da coluna*/
+.coluna-paginas {
+    padding: 40px;
+    color: #fff;
+    overflow-y: auto; /*rolagem pra conteudo longo*/
+}
+
+.coluna-paginas h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 10px;
+}
+
+
+
+/* botões */
+.btao-paginas {
+    display: none; /* Esconde todas as seções*/
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.btao-paginas.active {
+    display: block;
+    opacity: 2; /* Transição suave */
+}
+
+
+
+
+/* Botão de Deslogar */
+.logout-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #4d9aff; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #cc0000;
 }

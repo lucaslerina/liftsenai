@@ -15,6 +15,7 @@ body{
     background: url(./imgm/lift-senai-background2.png);
     background-size: cover;
     background-position: center;
+     backdrop-filter: blur(1px); 
 }
 
 /* class=container*/

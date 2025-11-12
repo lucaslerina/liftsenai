@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procurar carona</title>
+<link rel="stylesheet" href="css/style_logado.css">
+   
+    
+</head>
+<body>
+    <div class="dashboard-container">
+        
+        <nav class="sidebar box-style">
+            <h1 class="logo">LiftSenai</h1>
+
+
+            <!-- barra lateral com os botões-->
+            <div class="menu">
+                <a href="2dashboard.html" class="btao-naveg" data-content="perfil">🪪 Meu Perfil</a>
+                <a href="3procurar.html" class="btao-naveg" data-content="procurar">🔎 Procurar Carona</a>
+                <a href="4oferecer.html" class="btao-naveg active" data-content="oferecer">🚘 Oferecer Carona</a>
+                <a href="5estatisticas.html" class="btao-naveg" data-content="estatisticas">📊 Estatísticas e Avaliações</a>
+            </div>
+            
+            <button id="logout-btn" class="logout-btn" onclick="window.location.href='1index.html'"> ⛍ Deslogar</button>
+        </nav>
+
+<!-- conteúdo na tela pro usuário-->
+
+        <main class="coluna-paginas">
+           
+                <section id="oferecer" class="btao-paginas active">
+                <h2>🚘 Oferecer Carona</h2>
+                <p>Publique sua rota, defina o horário de saída, o valor de custo dividido e as regras da sua carona.</p>
+                </section>
+                       
+        </main>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

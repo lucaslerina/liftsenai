@@ -3,7 +3,7 @@ function entrarnosite() {
     let senha = document.getElementById('senha').value
 
     if(login == "admin" && senha == "admin"){
-       window.location.href = 'dashboard.html'
+       window.location.href = '2dashboard.html'
             }else{
          alert('Login inválido')        
     }
