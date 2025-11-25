@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(.//lift-senai-background2.png);
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(1px);
+}
+.container{
+    display: flex;
+    width: 420px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 30px 40px;
+    box-shadow: 0 0 10px rgba(248, 245, 245, 0.555);
+    backdrop-filter: blur(70px);
+}
+.input-box{
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* espaçamento entre inputs */
+    
+}
+.salvarBotao{
+    margin: 10px;
+    padding: 10px;
+}
+    
