@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(./imgm/lift-senai-background2.png);
+    background-size: cover;
+    background-position: center;
+     backdrop-filter: blur(1px); 
+}
+
+/* class=container*/
+.container {
+    width: 420px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 10px;
+    color: #fff;
+    padding: 30px 40px;
+    box-shadow: 0 0 10px rgba(248, 245, 245, 0.555); 
+    backdrop-filter: blur(70px);
+}
+
+.container h1{
+    text-align: center;
+    
+}
+
+/* class=input-box */
+
+.input-box label {
+    display: block; /* Garante que a label ocupe uma linha inteira */
+    margin-bottom: 5px; /* Adiciona um pequeno espaço entre a label e o input */
+    font-weight: 600; /* Deixa o texto da label um pouco mais forte */
+    color: #fff;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    margin: 30px 0;
+}
+
+.input-box input{
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+    border-radius: 40px;
+}
+
+/* Parte do código feita com ajuda para tirar o filtro que muda a cor do placeholder nas configurações já programadas do navegador*/
+.input-box input:-webkit-autofill,
+.input-box input:-webkit-autofill:hover,
+.input-box input:-webkit-autofill:focus,
+.input-box input:-webkit-autofill:active{ 
+    /* Esta regra é a CHAVE para a transparência do fundo */
+    -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+    
+    /* Esta regra é a CHAVE para manter o texto branco */
+    -webkit-text-fill-color: #fff !important; 
+    
+    /* A transição é opcional, mas ajuda */
+    transition: background-color 5000s ease-in-out 0s;
+}    
+/*fim*/
+
+.input-box input::placeholder {
+    color: #fff;
+}
+
+.input-box  i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+
+.salvarBotao{
+    width: 100%;
+    height: 50px;
+    margin-top: 30px;
+    background-color: #fff;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    box-shadow: 0 0 0 10px rgba(0,0,0, .1);
+}
+
+.salvarBotao:hover {
+    background-color: transparent;
+    border: 2px solid ;
+    border: 2px solid rgba(255, 255, 255, .2);
+    color: #fff;
+    transition: 0.6s;
+}
+
+
