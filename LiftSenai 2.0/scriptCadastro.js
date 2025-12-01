@@ -12,6 +12,11 @@ function cadastrarUsuario() {
     let usuarioLido = document.getElementById('inputUsuario').value
     let senhaLida = document.getElementById('inputSenha').value 
 
+    if (!nomeLido || !matriculaLida || !enderecoLido || !cnhLida || !usuarioLido || !senhaLida) {
+        alert("Por favor, preencha todos os campos do formulário para cadastrar o usuário.");
+        return; 
+    }
+
     const usuario = {
         nome: nomeLido,
         matricula: matriculaLida,
