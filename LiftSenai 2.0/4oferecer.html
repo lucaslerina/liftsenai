@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Procurar carona</title>
-<link rel="stylesheet" href="css/style_logado.css">
+<link rel="stylesheet" href="/LiftSenai 2.0/css/style_oferecer.css">
    
     
 </head>
@@ -31,9 +31,37 @@
         <main class="coluna-paginas">
            
                 <section id="oferecer" class="btao-paginas active">
-                <h2>🚘 Oferecer Carona</h2>
-                <p>Publique sua rota, defina o horário de saída, o valor de custo dividido e as regras da sua carona.</p>
-                </section>
+    <h2>🚘 Oferecer Carona</h2>
+    <p>Publique sua rota, defina o horário de saída, o valor de custo dividido e as regras da sua carona.</p>
+
+    <div class="card-box">
+
+        <label>Origem:</label>
+        <input type="text" id="origem" placeholder="Digite o ponto de partida">
+
+        <label>Destino:</label>
+        <input type="text" id="destino" placeholder="Digite o destino">
+
+        <label>Data da viagem:</label>
+        <input type="date" id="data">
+
+        <label>Horário de saída:</label>
+        <input type="time" id="hora">
+
+        <label>Quantidade de vagas:</label>
+        <input type="number" id="vagas" min="1" placeholder="Ex: 3">
+
+        <label>Valor sugerido por passageiro (opcional):</label>
+        <input type="number" id="valor">
+
+        <label>Observações (opcional):</label>
+        <textarea id="obs" placeholder="Ex: posso buscar na porta principal..."></textarea>
+
+        <button class="confirmar-btn" onclick="cadastrarCarona()">Publicar Carona</button>
+
+    </div>
+</section>
+
                        
         </main>
 

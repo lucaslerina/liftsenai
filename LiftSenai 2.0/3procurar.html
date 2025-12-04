@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Procurar carona</title>
-    <link rel="stylesheet" href="css/style_logado.css">
+    <link rel="stylesheet" href="./css/style_procurando.css">
 
 
 </head>
@@ -15,10 +15,8 @@
 
         <nav class="sidebar box-style">
             <h1 class="logo">LiftSenai</h1>
-
-
-            <!-- barra lateral com os botões-->
             <div class="menu">
+                
                 <a href="2dashboard.html" class="btao-naveg" data-content="perfil">🪪 Meu Perfil</a>
                 <a href="3procurar.html" class="btao-naveg active" data-content="procurar">🔎 Procurar Carona</a>
                 <a href="4oferecer.html" class="btao-naveg" data-content="oferecer">🚘 Oferecer Carona</a>
@@ -29,37 +27,37 @@
             <button id="logout-btn" class="logout-btn" onclick="window.location.href='1index.html'"> ⛍ Deslogar</button>
         </nav>
 
-        <!-- conteúdo na tela pro usuário-->
-
         <main class="coluna-paginas">
 
-            <section id="procurar" class="btao-paginas active">
-                <h2>🔎 Procurar Carona</h2>
-                <hr>
-                <div id="formContainer">
-                    <label for="">Local de Partida:</label>
-                    <input id="inputPartida" type="text">
+           <section id="procurar" class="btao-paginas active">
+    <h2>🔎 Procurar Carona</h2>
+    <hr>
 
-                    <label for="">Hora de Saída</label>
-                    <input id="inputHora" type="text">
+    <div class="area-corrida">
+        
+        <div id="formContainer">
+            <label>Local de Partida:</label>
+            <input id="inputPartida" type="text">
 
-                    <label for="">Local de chegada:</label>
-                    <input id="inputChegada" type="text">
+            <label>Hora de Saída</label>
+            <input id="inputHora" type="text">
 
-                    <label for="">Motorista:</label>
-                    <input id="inputMotorista" type="text">
+            <label>Local de chegada:</label>
+            <input id="inputChegada" type="text">
 
+            <label>Motorista:</label>
+            <input id="inputMotorista" type="text">
 
-                    <button onclick="CadastrarCorrida()">Cadastrar Corrida</button>
-                </div>
+            <button onclick="CadastrarCorrida()">Cadastrar Corrida</button>
+        </div>
 
-                <div id="paineldeCorridas">
-                    <hr>
-                    <h2>Painel de Corridas</h2>
-                    <div id="listaCorridas">
-                        Destinos Disponiveis
-                    </div>
-            </section>
+        <div id="paineldeCorridas">
+            <h2>Painel de Corridas</h2>
+            <div id="listaCorridas">Destinos Disponíveis</div>
+        </div>
+
+    </div>
+</section>
 
         </main>
 

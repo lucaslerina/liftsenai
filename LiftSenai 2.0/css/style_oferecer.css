@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+
+body{
+    display: flex;
+    justify-content:flex-start;
+    background: url(./imgm/liftsenailimpo.jpg);
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(8px);
+    color: #fff;
+    height: 100vh;
+    overflow: hidden;  /* remove scroll lateral */
+}
+
+
+.dashboard-container{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    width: 100%;
+}
+
+
+.sidebar{
+    padding: 20px;
+}
+
+.logo{
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-grow: 1;
+}
+
+.btao-naveg{
+    padding: 12px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.btao-naveg:hover{
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(255,255,255,0.3);
+}
+
+.btao-naveg.active{
+    background: rgba(255,255,255,0.18);
+    border-color: #fff;
+    font-weight: bold;
+}
+
+.logout-btn{
+    margin-top: 20px;
+    padding: 12px;
+    background: rgba(0,140,255,0.9);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    transition: .2s;
+}
+
+.logout-btn:hover{
+    background: red;
+}
+
+/* CONTEÚDO */
+.coluna-paginas{
+    padding: 40px;
+    overflow-y: auto;
+    scrollbar-width: none; /* some a barra */
+}
+
+.coluna-paginas::-webkit-scrollbar{
+    display: none; /* some a barra */
+}
+
+/* TÍTULO */
+.coluna-paginas h2{
+    font-size: 2.2em;
+    margin-bottom: 10px;
+}
+
+/* CARD DO FORM — MESMO ESTILO DO PROCURAR CARONA */
+.card-box{
+    margin-top: 20px;
+    width: 450px;
+
+    background: rgba(255,255,255,0.1);
+    padding: 25px;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255,0.25);
+}
+
+/* LABELS */
+.card-box label{
+    font-weight: 600;
+}
+
+/* INPUTS */
+.card-box input,
+.card-box textarea{
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #fff;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    outline: none;
+    resize: none;
+}
+
+.card-box input::placeholder,
+.card-box textarea::placeholder{
+    color: rgba(255,255,255,0.6);
+}
+
+/* BOTÃO CONFIRMAR */
+.confirmar-btn{
+    margin-top: 10px;
+    padding: 12px;
+    background: rgba(0,140,255,0.7);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #fff;
+    transition: 0.2s;
+}
+
+.confirmar-btn:hover{
+    background: rgba(0,140,255,1);
+}
+
