@@ -81,7 +81,7 @@ function listarCaronasPublicadas() {
 
             <button class="excluir-btn" onclick="excluirCarona(${carona.id})">Excluir</button>
         `;
-
+document.addEventListener("DOMContentLoaded", listarCaronasPublicadas);
         container.appendChild(div);
     });
 }
@@ -92,4 +92,5 @@ function excluirCarona(id) {
     lista = lista.filter(c => c.id !== id);
     salvarCaronas(lista);
     listarCaronasPublicadas();
+    
 }

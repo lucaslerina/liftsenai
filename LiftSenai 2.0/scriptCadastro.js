@@ -34,7 +34,7 @@ function cadastrarUsuario() {
 
     limpaForm();
     alert("Usuário cadastrado com sucesso!");
-    window.location.href = "2dashboard.html"
+    window.location.href = "1index.html"
 }
 
 function limpaForm() {

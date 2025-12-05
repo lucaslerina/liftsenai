@@ -18,7 +18,7 @@ body{
     backdrop-filter: blur(8px);
     color: #fff;
     height: 100vh;
-    overflow: hidden;  /* remove scroll lateral */
+    overflow: hidden; 
 }
 
 
