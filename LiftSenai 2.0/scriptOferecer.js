@@ -79,12 +79,16 @@ function listarCaronasPublicadas() {
             Vagas: ${carona.vagas} • Valor: R$ ${carona.valor ? carona.valor : "0"}<br>
             <small>${carona.obs}</small><br>
 
-            <button class="excluir-btn" onclick="excluirCarona(${carona.id})">Excluir</button>
+            <button class="editar-btn" onclick="editarCarona(${carona.id})">Editar</button>
+
+            <button class="excluir-btn" ondblclick="excluirCarona(${carona.id})">Excluir</button>
         `;
 document.addEventListener("DOMContentLoaded", listarCaronasPublicadas);
         container.appendChild(div);
     });
 }
+
+
 
 // Excluir carona
 function excluirCarona(id) {
@@ -93,4 +97,27 @@ function excluirCarona(id) {
     salvarCaronas(lista);
     listarCaronasPublicadas();
     
+}
+function editarCarona(id) {
+    const lista = carregarCaronas();
+    // Encontra o objeto carona na lista que corresponde ao ID
+    const caronaParaEditar = lista.find(c => c.id === id);
+
+    if (!caronaParaEditar) {
+        alert("Carona não encontrada!");
+        return;
+    }
+
+    // 1. Preenche o formulário com os dados da carona
+    document.getElementById("origem").value = caronaParaEditar.origem;
+    document.getElementById("destino").value = caronaParaEditar.destino;
+    document.getElementById("data").value = caronaParaEditar.data;
+    document.getElementById("hora").value = caronaParaEditar.hora;
+    document.getElementById("vagas").value = caronaParaEditar.vagas;
+    document.getElementById("valor").value = caronaParaEditar.valor;
+    document.getElementById("obs").value = caronaParaEditar.obs;
+
+    
+    document.getElementById("caronaIdEdicao").value = caronaParaEditar.id;
+    document.getElementById("btnAcao").textContent = "Salvar Edição";
 }

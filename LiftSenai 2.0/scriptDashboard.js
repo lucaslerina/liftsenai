@@ -28,3 +28,16 @@ function carregarDadosUsuario() {
         window.location.href = "1index.html";
     }
 }
+
+document.addEventListener('DOMContentLoaded', editarDadosUsuario);
+
+function editarDadosUsuario() {
+    const cadastroJSON = localStorage.getItem("editar");
+    
+    if (!cadastroJSON){
+        console.warn()
+    } 
+}
+{
+    
+}
