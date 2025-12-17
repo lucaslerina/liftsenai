@@ -3,74 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Procurar carona</title>
-<link rel="stylesheet" href="./css/style_oferecer.css">
-   
-    
+    <title>Oferecer Carona</title>
+    <link rel="stylesheet" href="./css/style_oferecer.css">
 </head>
 <body>
     <div class="dashboard-container">
         
         <nav class="sidebar box-style">
             <h1 class="logo">LiftSenai</h1>
-
-
-            <!-- barra lateral com os botões-->
             <div class="menu">
                 <a href="2dashboard.html" class="btao-naveg" data-content="perfil">🪪 Meu Perfil</a>
                 <a href="3procurar.html" class="btao-naveg" data-content="procurar">🔎 Procurar Carona</a>
                 <a href="4oferecer.html" class="btao-naveg active" data-content="oferecer">🚘 Oferecer Carona</a>
                 <a href="5estatisticas.html" class="btao-naveg" data-content="estatisticas">📊 Estatísticas e Avaliações</a>
             </div>
-            
             <button id="logout-btn" class="logout-btn" onclick="window.location.href='1index.html'"> ⛍ Deslogar</button>
         </nav>
 
-<!-- conteúdo na tela pro usuário-->
-
         <main class="coluna-paginas">
-           
-                <section id="oferecer" class="btao-paginas active">
-                    <div id="listaOfertas" class="card-box" style="margin-top: 20px;">
-        <h3>Caronas Publicadas</h3>
-        </div>
-</section>
+            <section id="oferecer">
+                <h2>🚘 Oferecer Carona</h2>
+                <p>Publique sua rota, defina o horário de saída e o custo dividido.</p>
 
-    <h2>🚘 Oferecer Carona</h2>
-    <p>Publique sua rota, defina o horário de saída, o valor de custo dividido e as regras da sua carona.</p>
+                <div class="card-box">
+                    <input type="hidden" id="caronaIdEdicao" value="">
 
-    <div class="card-box">
+                    <label>Origem:</label>
+                    <input type="text" id="origem" placeholder="Digite o ponto de partida">
 
-        <label>Origem:</label>
-        <input type="text" id="origem" placeholder="Digite o ponto de partida">
+                    <label>Destino:</label>
+                    <input type="text" id="destino" placeholder="Digite o destino">
 
-        <label>Destino:</label>
-        <input type="text" id="destino" placeholder="Digite o destino">
+                    <label>Data da viagem:</label>
+                    <input type="date" id="data">
 
-        <label>Data da viagem:</label>
-        <input type="date" id="data">
+                    <label>Horário de saída:</label>
+                    <input type="time" id="hora">
 
-        <label>Horário de saída:</label>
-        <input type="time" id="hora">
+                    <label>Quantidade de vagas:</label>
+                    <input type="number" id="vagas" min="1" placeholder="Ex: 3">
 
-        <label>Quantidade de vagas:</label>
-        <input type="number" id="vagas" min="1" placeholder="Ex: 3">
+                    <label>Valor sugerido por passageiro (opcional):</label>
+                    <input type="number" id="valor">
 
-        <label>Valor sugerido por passageiro (opcional):</label>
-        <input type="number" id="valor">
+                    <label>Observações (opcional):</label>
+                    <textarea id="obs" placeholder="Ex: posso buscar na porta principal..."></textarea>
 
-        <label>Observações (opcional):</label>
-        <textarea id="obs" placeholder="Ex: posso buscar na porta principal..."></textarea>
+                    <button id="btnAcao" class="confirmar-btn" onclick="cadastrarCarona()">Publicar Carona</button>
+                </div>
 
-        <button class="confirmar-btn" onclick="cadastrarCarona()">Publicar Carona</button>
+                <hr style="margin: 40px 0; border: 0; border-top: 1px solid rgba(255,255,255,0.2);">
 
-    </div>
-</section>
-
-                       
+                <h3>Caronas Publicadas</h3>
+                <div id="listaOfertas" class="container-cards">
+                    </div>
+            </section>
         </main>
-
     </div>
+
     <script src="scriptOferecer.js"></script>
 </body>
 </html>
