@@ -1,6 +1,6 @@
-const corridas = JSON.parse(localStorage.getItem("corridas")) || []
 
 function CadastrarCorrida(){
+    const corridas = JSON.parse(localStorage.getItem("corridas")) || []
     let partidaLido = document.getElementById('inputPartida').value
     let horaLida = document.getElementById('inputHora').value
     let chegadaLido = document.getElementById('inputChegada').value
@@ -39,8 +39,10 @@ function limparForm(){
 }
 
 function mostrartodascorridas(){
+     const corridas = JSON.parse(localStorage.getItem("corridas")) || []
     const listaCorridasDiv = document.getElementById('listaCorridas');
     listaCorridasDiv.innerHTML = '';
+
 
     if (corridas.length === 0) {
         listaCorridasDiv.innerHTML = '<p>Nenhuma carona disponível. Cadastre uma!</p>';
